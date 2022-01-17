@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="882.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.CompteController">
+    <top>
+        <GridPane prefHeight="292.0" prefWidth="882.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="366.0" style="-fx-font-size: 25;" text="Solde :" GridPane.rowIndex="1" />
+                <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="18.0" prefHeight="36.0" prefWidth="390.0" style="-fx-font-size: 25;" text="Max Dec:" GridPane.rowIndex="3" />
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="423.0" style="-fx-font-size: 25;" text="Max retrait :" GridPane.rowIndex="4" />
+                <Button fx:id="btnSubmit" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onSubmit" prefHeight="12.0" prefWidth="135.0" text="Add" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                <TextField fx:id="SoldeField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="360.0" promptText="Entrez le solde" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="maxDecouvertField" maxWidth="-Infinity" prefHeight="31.0" prefWidth="358.0" promptText="Entrez le max decouvert" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="maxRetraitField" maxWidth="-Infinity" prefHeight="31.0" prefWidth="357.0" promptText="Entrez le max Retrait" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="50.0" layoutY="60.0" prefHeight="36.0" prefWidth="398.0" style="-fx-font-size: 25;" text="Id Client :" />
+            <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="417.0" style="-fx-font-size: 25;" text="Decouvert :" GridPane.rowIndex="2" />
+            <TextField fx:id="decouvertField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="360.0" promptText="Entrez le découvert" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="combo" onAction="#onidclient" prefHeight="31.0" prefWidth="358.0" promptText="Selectionnez L'id du client" GridPane.columnIndex="1" />
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </GridPane>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="86.0" prefWidth="871.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+                <Button fx:id="btnLister" mnemonicParsing="false" onAction="#onList" text="Lister" />
+                <Button fx:id="btnModify" mnemonicParsing="false" onAction="#onModify" text="Modify" />
+                <Button fx:id="btnExit" mnemonicParsing="false" onAction="#onExit" text="Exit" />
+                <Button fx:id="btnTransaction" layoutX="165.0" layoutY="22.0" mnemonicParsing="false" onAction="#onTransaction" text="Transaction" />
+                <Button fx:id="btnVersement" layoutX="475.0" layoutY="22.0" mnemonicParsing="false" onAction="#onVerser" text="Virement" />
+            <Button fx:id="btnLister1" layoutX="241.0" layoutY="30.0" mnemonicParsing="false" onAction="#onListDec" text="Lister Dec" />
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+   <center>
+        <TableView fx:id="table" onMouseClicked="#OnSet" prefHeight="328.0" prefWidth="856.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="ClientCol" prefWidth="75.0" text="idclient" />
+                <TableColumn fx:id="CompteCol" prefWidth="75.0" text="idcompte" />
+                <TableColumn fx:id="SoldeCol" prefWidth="75.0" text="Solde" />
+                <TableColumn fx:id="decouvertCol" prefWidth="75.0" text="Decouvert" />
+                <TableColumn fx:id="maxDecouvertCol" prefWidth="156.0" text="Max Decouvert" />
+                <TableColumn fx:id="maxRetraitCol" prefWidth="127.0" text="Max Retrait" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </TableView>
+   </center>
+</BorderPane>

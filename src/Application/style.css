@@ -1,0 +1,146 @@
+#bp {
+-fx-background-image : url("money-finance-bank-cash.jpg");
+}
+
+#ap {
+     -fx-background-image : url("money-finance-bank-cash.jpg");
+
+}
+#lb
+{
+-fx-text-fill: #d9e5d4;
+}
+
+#compteBtn:hover {
+    -fx-background-color:
+        #8eb383;
+}
+
+#compteBtn
+{
+-fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+     #d9e5d4;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+}
+#clientBtn
+{
+-fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+      #d9e5d4;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+}
+#clientBtn:hover {
+    -fx-background-color:
+        #8eb383;
+}
+
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: #EFF0BB;
+    -fx-opacity: 1;
+}
+
+.label-bright {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: blue;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 32pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: red;
+    -fx-opacity: 1;
+}
+
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #d9e5d4;
+    -fx-background-color: #81928B;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 15;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color:
+        transparent
+        transparent
+        derive(-fx-base, 80%)
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 15pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #549193;
+}
+
+.button {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+              #d9e5d4;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+}
+.button:hover {
+    -fx-background-color:
+        #8eb383;
+}
+.button:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+.button Text {
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #a30000 , 0,0,0,2 );
+}
+.combo-box {
+
+    -fx-border-color: #8eb383;
+    -fx-border-radius:50px;
+    -fx-background-radius:50px;
+    -fx-font-size : 15px;
+}
+
+.combo-box:hover {
+   -fx-text-fill : #8eb383;
+}
+
+.combo-box-base:hover {
+   -fx-background-color:#8eb383;
+}
+
+.text-field {
+   -fx-border-radius : 50px;
+     -fx-background-radius:50px;
+      -fx-border-color: #8eb383;
+      -fx-border-width : 1px;
+
+}
